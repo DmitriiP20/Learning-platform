@@ -1,0 +1,29 @@
+Problem: compute_derivative
+
+	Params: 
+		Type : Calculation
+		Functions : ["e^x", "x^n", "sin(x)", "log(x)"]
+		Graphs : []
+		Constants : [1, 2]
+		Points : [1, 2, 3, 4, 5]
+
+	---
+
+	Statement: 
+		Given function $f(x) = {} $, compute its 
+		derivative $f'(x)$ at point $x={}$.
+
+	---
+
+
+	Graph Config:
+		
+		
+	---
+
+	Solution: 
+		Recall the formula for differentiating $f(x) = {}$: $$f'(x) = {}.$$ 
+		Then plug in $x = {}$ to get $f'({}) = {}$.  
+
+	---
+
