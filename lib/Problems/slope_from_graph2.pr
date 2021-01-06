@@ -1,0 +1,117 @@
+def slope_from_graph:
+
+	Params: 
+		Type : Multiple Choice
+		Functions : [f1,f2,f3]
+		Graphs : [g1,g2]
+		Constants : [x1, x2]
+
+	
+	Statement : 
+		The following figure shows the graph of $y=f(x)$. Estimate the instantaneous rate of change of $f(x)$ at $x = {{x1}}$.
+		
+		{{Make Graph : g}}
+
+
+	Graph Config:
+		
+		Config g :
+			Interval : (x1 -. 5, x2 +.5)
+			Functions : 
+				f, color = 'blue'
+				l = f.tangent. color = 'red', 'dashed'
+			Points: 
+				(x1, f(x1)), show_coordinates = True
+				(x2, l(x2)), show_coordinates = True
+
+	Solution: 	
+
+
+
+
+
+def rate_from_formula:
+	Params: 
+		Type : Multiple Choice
+		Functions : [f]
+		Graphs : 
+		Constants : x1, x2  
+
+	Statement : 
+		Esitmat $ f'({{x1}}) $ when $f(x) = {{f}}$, using $x = {{x1}}$ and $x = {{x2}}$. Round to two decimals
+
+
+	 Configuration:
+
+		Config g :
+			Interval : 
+			Functions : 
+			Points: 
+
+
+
+def Choose_possibel_values: **Some Difficulty
+	Params: 
+		Type : Multiple Choice
+		Functions : [f]
+		Graphs : 
+		String : [b1, b2]
+		Constants : [x1, x2]
+
+	Statement : 
+		A function $f$ has $f({{x1}}) = {{f(x1)}}$ and $f'({{x1}}) = {{f'(x1)}}. If f is {{b1}} abd {{b2}}, which of the following is a possible value for $f({{x2}})
+
+	 Configuration:
+
+		Config Graphs :
+		
+
+		Config Functions:
+			config f:	
+			#We want to transform the functions so that x1 and x2 satisfy #statment
+
+		Solution statemne:
+			
+
+
+def rank_rate_change:
+	Params:
+		Type: Multiple Choice
+		Functions: [f]
+		Graphs : [g]
+		Constants : [x1, x2, x3]
+
+	Statement :
+		Consider the graph of $f$, shown below. Rank the
+		values of the rate of change of $f(x)$ at $x = a, b, x$.
+		{{Make Graph : g}}
+
+
+	 Graph Config :
+		Config  g :
+	 		config axis:
+				x-axis:
+					show_coordinates = False
+					special_labels:
+						x1 : a
+						x2 : b
+						x3 : c
+
+			Functions:
+				f, color = 'blue'
+
+			Interval:
+				(min(x1,x2,x3) - 1, max(x1,x2,x3) + 1)
+
+			Points:
+				(x1, f(x1)), label = True
+				(x2, f(x2)), label = True
+				(x3, f(x3)), label = True
+
+
+
+
+def choose_graph_deriv:
+	Params:
+		Type : Multiple Choice
+		Functions : []

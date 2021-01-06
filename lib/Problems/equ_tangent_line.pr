@@ -1,0 +1,52 @@
+def equ_tangent_line	
+
+    Params:
+		Type: Multiple Choice
+		Functions: [f,g]
+		Constants: [a]
+
+	Statement :
+        Find an equation for the tangent line to the curve \[y = {{g}}\] at the point \[( {{a}}, {{g(a)}})\].
+
+	Functions:
+		f : poly(4,0,4)
+        g : x * sqrt(f)
+
+	Constants:
+		a : [-3,3], f(a)>0
+
+	Solution:
+		sympy: diff(g,a)*x + (f(a)- diff(g,a)*a)
+
+    # COMMENT: diff(g,a) would denote a wrapper for  [gprime = diff(g,x), eval(gprime, a)]
+     
+	Choices:
+		
+
+
+Question
+<eqn> 
+$X = randnum(2,4,1);
+$XX = $X*$X;
+$B = randnum(2,4,1,$A);
+$BXX = $B*$X*$X;
+$C = randnum(2,7,1,\sqrt($B*$X*$X));
+$CC = $C*$C;
+$D = abs($C*$C - $B*$X*$X);
+$SIGN = '+';
+if ( $C*$C - $B*$X*$X < 0 ){$SIGN = '-'}
+$Y = $X*$C;
+$SLOPE = fraction($CC + $BXX,$C);
+@err = pick(4,-4,-3,-2,-1,1,2,3,4,5);
+''</eqn>
+<watex>
+Find an equation for the tangent line to the curve \[y = x\sqrt{${B}x^2 $SIGN $D}\] at the point \[($X,$Y)\].
+</watex>
+<_> 
+
+Answer
+<watex>\[y - <EQN $Y> = <EQN $SLOPE>(x - <EQN $X>)\]</watex>
+<watex>\[y - <EQN $Y> = <EQN $SLOPE + $err[0]>(x - <EQN $X>)\]</watex>
+<watex>\[y - <EQN $Y> = <EQN $SLOPE + $err[1]>(x - <EQN $X>)\]</watex>
+<watex>\[y - <EQN $Y> = <EQN $SLOPE + $err[2]>(x - <EQN $X>)\]</watex>
+<watex>\[y - <EQN $Y> = <EQN $SLOPE + $err[3]>(x - <EQN $X>)\]</watex>

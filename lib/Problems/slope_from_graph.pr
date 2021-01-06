@@ -1,0 +1,31 @@
+Type : {Multiple Choice,4}
+Functions : {f}
+Graphs : {g} 
+Variables : {x1, x2}
+
+Statement {
+	Find the slope of the secent line between the points that have x corrdintates $x = {x1}$ and $x = {x2}$ on the foloowing graph: 
+	{{show graph {g} }}
+}
+
+
+
+
+
+show graph {
+	
+	specify g {
+
+		Functions:
+			f, color = 'red'
+			l = line((x1,f(x1)), (x2,f(x2))), color = 'green'
+
+		Interval:
+			(x1-.5, x2+.5)
+
+		Points:
+			Intersect(f,l), label = True,
+			(f, x-axis), label = False
+
+	}
+}

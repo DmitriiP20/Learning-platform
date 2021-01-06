@@ -1,0 +1,35 @@
+def rank_rate_change:
+	Params:
+		Type: Multiple Choice
+		Functions: [f]
+		Graphs : [g]
+		Constants : [x1, x2, x3]
+
+	Statement :
+		Consider the graph of $f$, shown below. Rank the
+		values of the rate of change of $f(x)$ at $x = a, b, x$.
+		{{Make Graph : g}}
+
+
+	 Graph Config :
+	 	config axis:
+			x-axis:
+				show_coordinates = False
+				special_labels:
+					x1 : a
+					x2 : b
+					x3 : c
+
+		Config  g :
+			Functions:
+				f, color = 'blue'
+
+			Interval:
+				(min(x1,x2,x3) - 1, max(x1,x2,x3) + 1)
+
+			Points:
+				(x1, f(x1)), label = True
+				(x2, f(x2)), label = True
+				(x3, f(x3)), label = True
+
+

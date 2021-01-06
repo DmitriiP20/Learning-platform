@@ -1,0 +1,30 @@
+Question
+<eqn> 
+$NAME = randnum(0,3,1);
+@fullname = ('radial tires', 'office chairs', 'video game consoles', 'high definition televisions'); 
+@shortname = ('tires', 'chairs', 'consoles', 'televisions'); 
+$ITEM = randnum(0,1,1);
+@units = ('hundred','thousand');
+@num = (100,1000);
+$C = randnum(2,5,1,$B);
+$h = randnum(2,3,1);
+$B = $h*randnum(2,4,1);
+$A = randnum(100*ceil($B*($C+$h)*($C+$h)/100),1000,50);
+$ANS = $B*($C*$C - ($C + $h)*($C + $h))/$h;
+@err = pick(4,-4,-3,-2,-1,1,2,3,4,5);
+''</eqn>
+<watex>
+The weekly demand function for <EQN $fullname[$NAME]> is given by
+<br><br>
+<center>\[p = d(x) = $A - ${B}x^2\]</center>
+<br>
+where \[x\] is the number of <EQN $units[$ITEM]>s of <EQN $shortname[$NAME]> and \[p\] is in dollars. Find the \uline{average rate of change} of the unit price as the quantity demanded goes from <EQN $C*$num[$ITEM]> <EQN $shortname[$NAME]> to <EQN ($C+$h)*$num[$ITEM]> <EQN $shortname[$NAME]>. 
+</watex>
+<_> 
+
+Answer
+<EQN $ANS> dollars per <EQN $units[$ITEM]> <EQN $shortname[$NAME]>
+<EQN $ANS+5*$err[0]> dollars per <EQN $units[$ITEM]> <EQN $shortname[$NAME]>
+<EQN $ANS+5*$err[1]> dollars per <EQN $units[$ITEM]> <EQN $shortname[$NAME]>
+<EQN $ANS+5*$err[2]> dollars per <EQN $units[$ITEM]> <EQN $shortname[$NAME]>
+<EQN $ANS+5*$err[3]> dollars per <EQN $units[$ITEM]> <EQN $shortname[$NAME]>

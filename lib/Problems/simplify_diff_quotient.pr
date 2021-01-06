@@ -1,0 +1,23 @@
+def simplify_diff_quotient_poly	
+
+    Params:
+		Type: Multiple Choice
+		Functions: [f]
+		Constants: [a]
+
+	Statement :
+		If \[f(x) = {{f}}\], simplify \[ f({{a}}) + h) - f({{a}})}{h}\].
+
+	Functions:
+		f : poly(4,4,0)
+
+	Constants:
+		a : [-5,5]
+
+	Solution:
+		sympy: simplify( (f(a+h)-f(a))/h )
+
+	Choices:
+		
+
+
