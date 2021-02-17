@@ -1,7 +1,7 @@
 # Learning-platform
 This repository contains code me and my teammates wrote for the Penn State's on-line learning platform. The goal was to build a flexible system for generating homework assignments in Calculus (and for other subjects in the future) with output in Jupyter notebook and WebAssign.
 
-## Calculus objects in Python
+## Python classes for Calculus
 Please navigate to the `lib` folder to see code examples. In particular, `lib/f_functionclass.py` is the main class that provides flexible calls to various math-function features and attributes (e.g. derivatives, tangent lines, etc.) needed for problems in Calculus. This object was initially built as a wrapper of many SymPy built-in methods, but we added a lot of extra functionality needed for a Calculus course.
 
 ## Parser and problem generator
